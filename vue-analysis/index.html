@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue原理分析--让每一个属性都可观测(Observer类的实现)</title>
+  </head>
+  <body>
+    <script type="module">
+      import { Observer} from "./observer.js";
+      
+      let obj = new Observer({
+        name: "小明",
+        age: 18,
+        demo:{
+          a: "aaaa",
+          b: 13
+        }
+      });
+      console.log(obj.value.name);
+      obj.value.age = 25;
+      console.log(obj.value.demo);
+      obj.value.demo.a = "123";
+      obj.value.demo.b = 90;
+    </script>
+  </body>
+</html>
