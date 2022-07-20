@@ -12,7 +12,7 @@ class HashTable<T>{
     this.count = 0;
   }
   
-  //哈希函数
+  //哈希函数--将字符串转换为哈希化的数字：元素存储位置的下标
   public hashFunc(string,size): number{
     let hashCode = 0 ;
     //霍纳法则
@@ -68,6 +68,9 @@ class HashTable<T>{
   public count():number {
     return this.count;
   }
+  
+  // 当 count 的数量超过 size 数量的 75% 时，就需要给哈希表扩容。以减少发生冲突的可能性。
+  // 反之，当count 的数量小于 size 数量的 25%，我们就需要缩小哈希表的容量，避免空间的大量浪费
   
   //扩容
   public resize(newSize):null{
