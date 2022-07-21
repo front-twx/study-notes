@@ -1,6 +1,8 @@
 //哈希表也叫散列表（二维数组），根据关键码值(key,value)而直接进行访问的数据结构。
 //若关键字为k，则其值存放在f(k)的存储位置上。由此，不需比较便可直接取得所查记录。
 //称这个对应关系f为散列函数，按这个思想建立的表为散列表。
+
+//存储结构由建->值，变为键-> 地址-> 值
 type Entry = {
   key: string,
   value: any,
@@ -10,8 +12,8 @@ type ListNode = {
   value: Entry,
   next?: ListNode
 };
-export class HashTable<T>{
-  private table: Array<ListNode | undefined> = [];
+export default class HashTable<T>{
+  protected table: Array<ListNode | undefined> = [];
   private size: number = 0;
   private count: number = 0;
   constructor(size = 7){

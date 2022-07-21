@@ -1,6 +1,6 @@
 //栈：先进后出；可以基于数组封装一个只能使用push和pop方法
 
-export class Stack<T>{
+export default class Stack<T>{
   private stack: Array<T> = [];
   constructor(){
     this.stack = [];

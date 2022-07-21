@@ -1,7 +1,7 @@
 //队列：先进先出；javascript的事件任务队列就是基于队列
 //无论栈还是队列不允许从中间插入元素
 
-export class Queue<T>{
+export default class Queue<T>{
   private queue: Array<T> = [];
   constructor(){
     this.queue = [];
