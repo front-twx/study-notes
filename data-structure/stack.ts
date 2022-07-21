@@ -1,6 +1,6 @@
 //栈：先进后出；可以基于数组封装一个只能使用push和pop方法
 
-class Stack<T>{
+export class Stack<T>{
   private stack: Array<T> = [];
   constructor(){
     this.stack = [];
@@ -13,8 +13,8 @@ class Stack<T>{
   }
   
   //出栈
-  public pop(): T | null{
-    if(!this.stack.length) return;
+  public pop(): any{
+    if(!this.stack.length) return null;
     return this.stack.pop();
   }
   
@@ -34,7 +34,7 @@ class Stack<T>{
   }
   
   //清空栈
-  public clear(): null{
+  public clear(): void{
     this.stack = [];
   }
 }

@@ -1,7 +1,7 @@
 //队列：先进先出；javascript的事件任务队列就是基于队列
 //无论栈还是队列不允许从中间插入元素
 
-class Queue<T>{
+export class Queue<T>{
   private queue: Array<T> = [];
   constructor(){
     this.queue = [];
@@ -14,7 +14,7 @@ class Queue<T>{
   }
   
   //出队
-  public dequeue():T{
+  public dequeue():any{
     return this.queue.shift();
   }
   
@@ -34,7 +34,7 @@ class Queue<T>{
   }
   
   //清空队列
-  public clear(): null{
+  public clear(): void{
     this.queue = [];
   }
 }
